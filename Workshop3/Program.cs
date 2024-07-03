@@ -18,7 +18,51 @@ for (int index = 0; index < idStudents.Length; index++)
 }
 
 // affichage des noms
+Console.WriteLine("Affichage des noms des etudiants");
 for (int index = 0; index < studentNames.Length; index++)
 {
     Console.WriteLine(studentNames[index]);
 }
+
+// affichage id, students, matricules et names
+Console.WriteLine("Les id, les matricules et les noms");
+for (int index = 0; index < studentNames.Length; index++)
+{
+    Console.WriteLine(idStudents[index] + " " + matricules[index] + ": " + studentNames[index]);
+}
+
+// autre declaration
+int[] numbers = { 1, 2, 3, 4, 5 };
+
+// utilisation du foreach
+
+Console.WriteLine("Affichage des nombres");
+foreach(int num in numbers)
+{
+    Console.WriteLine(num);
+}
+
+// les classes de base des arrays
+
+// CopyTo
+string[] studentNamesCopy = new string[studentNames.Length]; ;
+studentNames.CopyTo(studentNamesCopy,0);
+
+foreach(string name in studentNamesCopy)
+{
+    Console.WriteLine(name);
+}
+
+// Sort
+
+int[] unOrderNumbers = { 3, 5, 3, 1, 0, 2, 5 };
+Console.WriteLine("Unordered Numbers");
+Array.Sort(unOrderNumbers);
+Console.WriteLine("Ordered Numbbers");
+foreach (int num in unOrderNumbers)
+{
+    Console.WriteLine(num);
+}
+
+// reserver
+Array.Reverse(unOrderNumbers);
